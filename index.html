@@ -64,7 +64,7 @@
 </head>
 <body>
   <h2>Simple Video Player</h2>
-  <input type="file" id="videoInput" accept="video/*" />
+  <input type="file" id="videoInput" accept="video/*, .mkv, .avi, .wmv, .flv" />
   <video id="videoPlayer" controls></video>
   <button id="pipButton">Enable PiP Mode</button>
   <footer>Developed by Chinmay</footer>
@@ -88,7 +88,7 @@
           try {
             await videoPlayer.requestPictureInPicture();
           } catch (error) {
-            console.error('Error enabling PiP:', error);
+            console.error(error);
           }
         } else {
           document.exitPictureInPicture();
